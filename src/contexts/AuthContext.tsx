@@ -39,7 +39,7 @@ export function AuthProvider(props: AuthProvider) {
   const [user, setUser] = useState<User | null>(null)
 
   const signInURL = `https://github.com/login/oauth/authorize?scope=user&client_id=${
-    import.meta.env.VITE_REACT_APP_GITHUB_CLIENT_ID
+    import.meta.env.VITE_GITHUB_CLIENT_ID
   }`
 
   async function signIn(code: string) {

@@ -15,7 +15,7 @@ type Message = {
 }
 
 const messagesQueue: Message[] = []
-const socket = io(import.meta.env.VITE_REACT_APP_BASE_URL)
+const socket = io(import.meta.env.VITE_BASE_URL)
 
 socket.on("new_message", (newMessage: Message) => {
   messagesQueue.push(newMessage)
